@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer">
-      <!--  -->
+      <NavigationItem />
     </v-navigation-drawer>
 
     <v-app-bar>
@@ -18,8 +18,9 @@
 
 <script lang="ts">
 import BioItem from './components/BioItem.vue';
+import NavigationItem from './components/NavigationItem.vue';
 export default {
-  components: { BioItem },
+  components: { BioItem, NavigationItem },
   data: () => ({ drawer: false }),
 };
 </script>
