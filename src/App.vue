@@ -11,16 +11,15 @@
     </v-app-bar>
 
     <v-main>
-      <BioItem></BioItem>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import BioItem from './components/BioItem.vue';
 import NavigationItem from './components/NavigationItem.vue';
 export default {
-  components: { BioItem, NavigationItem },
+  components: { NavigationItem },
   data: () => ({ drawer: false }),
 };
 </script>

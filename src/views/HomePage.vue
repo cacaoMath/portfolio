@@ -29,7 +29,7 @@ import { defineComponent } from 'vue';
 import logo from '../assets/cacaomath.svg';
 
 export default defineComponent({
-  name: 'BioItem',
+  name: 'HomePage',
 
   data() {
     return {

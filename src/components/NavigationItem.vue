@@ -2,7 +2,9 @@
   <v-list nav dense>
     <v-list-item v-for="(item, key) in nav_list" :key="key">
       <v-list-item-content>
-        <v-list-item-title class="title"> {{ item.name }} </v-list-item-title>
+        <v-list-item class="title" :to="item.link">
+          {{ item.name }}
+        </v-list-item>
       </v-list-item-content>
     </v-list-item>
   </v-list>
@@ -15,9 +17,9 @@ interface NavItem {
   name: string;
   link: string;
 }
-const home: NavItem = { name: 'home', link: '' };
-const about: NavItem = { name: 'about', link: '' };
-const work: NavItem = { name: 'work', link: '' };
+const home: NavItem = { name: 'home', link: '/' };
+const about: NavItem = { name: 'about', link: '/about' };
+const work: NavItem = { name: 'work', link: '/work' };
 export default defineComponent({
   name: 'NavigationItem',
 
