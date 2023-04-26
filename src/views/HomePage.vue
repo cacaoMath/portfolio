@@ -3,10 +3,12 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-hover v-slot="{ isHovering, props }">
-          <v-img
+          <img
             v-bind="props"
             :src="isHovering ? kubistlogo : logo"
-            height="200"
+            width="256"
+            height="256"
+            class="logo"
           />
         </v-hover>
       </v-col>
