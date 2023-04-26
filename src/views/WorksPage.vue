@@ -1,41 +1,14 @@
 <template>
-  <v-container>
-    a
-    <v-row>
-      <v-col
-        v-for="(item, key) in programmingCardItems"
-        :key="key"
-        cols="4"
-        align-self="center"
-      >
-        <CardItems :title="item.title" :content="item.content" />
-      </v-col>
-    </v-row>
-  </v-container>
-  <v-container>
-    a
-    <v-row>
-      <v-col
-        v-for="(item, key) in journalCardItems"
-        :key="key"
-        cols="4"
-        align-self="center"
-      >
-        <CardItems :title="item.title" :content="item.content" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <CardItems :item-list="journalCardItems" />
+
+  <CardItems :item-list="programmingCardItems" />
 </template>
 
 <script setup lang="ts">
-import { Ref, defineComponent, ref } from 'vue';
-import CardItems from '../components/CardItems.vue';
+import { defineComponent } from 'vue';
+import CardItems, { CardItem } from '../components/CardItems.vue';
 
-interface CardItem {
-  title: string;
-  content: string;
-}
-const journalCardItems: Ref<Array<CardItem>> = ref([
+const journalCardItems: Array<CardItem> = [
   {
     title: 'a',
     content: 'none',
@@ -52,9 +25,9 @@ const journalCardItems: Ref<Array<CardItem>> = ref([
     title: 'b',
     content: 'none',
   },
-]);
+];
 
-const programmingCardItems: Ref<Array<CardItem>> = ref([
+const programmingCardItems: Array<CardItem> = [
   {
     title: 'a',
     content: 'none',
@@ -71,7 +44,8 @@ const programmingCardItems: Ref<Array<CardItem>> = ref([
     title: 'b',
     content: 'none',
   },
-]);
+];
+
 defineComponent({
   name: 'WorksPage',
   components: { CardItems },
