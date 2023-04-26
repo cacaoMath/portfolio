@@ -2,7 +2,13 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img :src="logo" class="my-3" contain height="200" />
+        <v-hover v-slot="{ isHovering, props }">
+          <v-img
+            v-bind="props"
+            :src="isHovering ? kubistlogo : logo"
+            height="200"
+          />
+        </v-hover>
       </v-col>
 
       <v-col class="mb-4">
@@ -27,6 +33,7 @@ import { defineComponent } from 'vue';
 
 // Logo
 import logo from '../assets/cacaomath.svg';
+import kubistlogo from '../assets/kubist.svg';
 
 export default defineComponent({
   name: 'HomePage',
@@ -34,6 +41,7 @@ export default defineComponent({
   data() {
     return {
       logo,
+      kubistlogo,
     };
   },
 });
