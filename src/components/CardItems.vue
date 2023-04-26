@@ -8,10 +8,12 @@
         cols="4"
         align-self="center"
       >
-        <v-card height="200">
-          <v-vard-title>{{ item.title }}</v-vard-title>
-          <v-vard-item>{{ item.content }}</v-vard-item>
-        </v-card>
+        <v-card
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :text="item.content"
+          variant="tonal"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -22,6 +24,7 @@ import { defineComponent } from 'vue';
 
 export interface CardItem {
   title: string;
+  subtitle: string;
   content: string;
 }
 
