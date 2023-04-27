@@ -13,21 +13,25 @@ const journalCardItems: Array<CardItem> = [
     title: 'a',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'a',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
 ];
 
@@ -36,21 +40,25 @@ const programmingCardItems: Array<CardItem> = [
     title: 'a',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'a',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
     subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
 ];
 

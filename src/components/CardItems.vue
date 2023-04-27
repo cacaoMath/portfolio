@@ -8,12 +8,21 @@
         cols="4"
         align-self="center"
       >
-        <v-card
-          :title="item.title"
-          :subtitle="item.subtitle"
-          :text="item.content"
-          variant="tonal"
-        />
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card
+            variant="tonal"
+            height="200"
+            max-height="300"
+            :elevation="isHovering ? 10 : 2"
+            v-bind="props"
+            :href="item.link"
+            target="_blank"
+          >
+            <v-card-title>{{ item.title }}</v-card-title>
+            <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
+            <v-card-text>{{ item.content }}</v-card-text>
+          </v-card>
+        </v-hover>
       </v-col>
     </v-row>
   </v-container>
@@ -26,6 +35,7 @@ export interface CardItem {
   title: string;
   subtitle: string;
   content: string;
+  link: string;
 }
 
 defineComponent({
