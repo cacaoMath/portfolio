@@ -48,3 +48,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.logo {
+  border-radius: 50%;
+}
+</style>
