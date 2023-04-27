@@ -30,14 +30,14 @@
   </v-container>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent } from 'vue';
 
 // Logo
 import logo from '../assets/cacaomath.svg';
 import kubistlogo from '../assets/kubist.svg';
 
-export default defineComponent({
+defineComponent({
   name: 'HomePage',
 
   data() {
