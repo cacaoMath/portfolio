@@ -5,7 +5,7 @@
       <v-col
         v-for="(item, key) in props.itemList"
         :key="key"
-        cols="4"
+        cols="5"
         align-self="center"
       >
         <v-hover v-slot="{ isHovering, props }">
@@ -17,8 +17,11 @@
             v-bind="props"
             :href="item.link"
             target="_blank"
+            class="pa-3 ma-1"
           >
-            <v-card-title>{{ item.title }}</v-card-title>
+            <v-card-title class="text-h5 flex-column text-truncate text-lg">{{
+              item.title
+            }}</v-card-title>
             <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
             <v-card-text>{{ item.content }}</v-card-text>
           </v-card>
