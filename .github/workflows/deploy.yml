@@ -1,4 +1,4 @@
-name: remote ssh command
+name: build & deploy by scp
 on: [push]
 jobs:
   build_deploy:
