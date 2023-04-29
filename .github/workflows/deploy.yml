@@ -17,10 +17,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload Files
-        uses: siva1024/scp-deployer@latest
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           source: './dist'
           target: '~/'
