@@ -1,77 +1,71 @@
 <template>
   <v-container>
-    a
-    <v-row>
-      <v-col
-        v-for="(item, key) in programmingCardItems"
-        :key="key"
-        cols="4"
-        align-self="center"
-      >
-        <CardItems :title="item.title" :content="item.content" />
-      </v-col>
-    </v-row>
-  </v-container>
-  <v-container>
-    a
-    <v-row>
-      <v-col
-        v-for="(item, key) in journalCardItems"
-        :key="key"
-        cols="4"
-        align-self="center"
-      >
-        <CardItems :title="item.title" :content="item.content" />
-      </v-col>
-    </v-row>
+    <h2>Research</h2>
+    <CardItems :item-list="journalCardItems" />
+
+    <h2>Programming</h2>
+    <CardItems :item-list="programmingCardItems" />
   </v-container>
 </template>
 
 <script setup lang="ts">
-import { Ref, defineComponent, ref } from 'vue';
-import CardItems from '../components/CardItems.vue';
+import { defineComponent } from 'vue';
+import CardItems, { CardItem } from '../components/CardItems.vue';
 
-interface CardItem {
-  title: string;
-  content: string;
-}
-const journalCardItems: Ref<Array<CardItem>> = ref([
+const journalCardItems: Array<CardItem> = [
   {
-    title: 'a',
-    content: 'none',
+    title:
+      'Feature Analysis to Estimate Sleep Time Based on Simple Measurement of Biological Information after Awakening',
+    subtitle:
+      'Mahiro Imabeppu, Ren Katsurada, Tatsuhito Hasegawa; IJBBB; Jul. 2020',
+    content:
+      'Keyword: Wearable device, Sleep time estimation, Support vector machine, Electrooculogram.',
+    link: 'http://www.ijbbb.org/show-85-939-1.html',
   },
   {
-    title: 'b',
-    content: 'none',
+    title:
+      'Effects of Different Activities on Learning Efficiency of m-Learning Users',
+    subtitle:
+      'Mahiro Imabeppu, 2021 IEEE TALE Tatsuhito Hasegawa; December. 2021',
+    content:
+      'Keywords: m-Learning, Learning Efficiency, Confidence Rating, Activity Recognition',
+    link: 'https://ieeexplore.ieee.org/document/9678604',
   },
   {
-    title: 'a',
-    content: 'none',
+    title: 'm-Learning時の行動や学習方法が学習効果や安全性に与える影響',
+    subtitle: '今別府 万大, 長谷川 達人; 情報処理学会論文誌; 2022/12/15',
+    content: 'Keyword: m-Learning, 歩きスマホ, 学習効果',
+    link: 'https://cir.nii.ac.jp/crid/1390575960085275392',
   },
-  {
-    title: 'b',
-    content: 'none',
-  },
-]);
+];
 
-const programmingCardItems: Ref<Array<CardItem>> = ref([
+const programmingCardItems: Array<CardItem> = [
   {
     title: 'a',
+    subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
+    subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'a',
+    subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
   {
     title: 'b',
+    subtitle: 'string',
     content: 'none',
+    link: 'https://cacaomath.com',
   },
-]);
+];
+
 defineComponent({
   name: 'WorksPage',
   components: { CardItems },
