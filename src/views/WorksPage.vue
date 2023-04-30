@@ -41,28 +41,31 @@ const journalCardItems: Array<CardItem> = [
 
 const programmingCardItems: Array<CardItem> = [
   {
-    title: 'a',
-    subtitle: 'string',
-    content: 'none',
-    link: 'https://cacaomath.com',
+    title: 'RSS collect API',
+    subtitle: 'Python, FastAPI',
+    content: '指定したRSSの記事から好みの記事を集めるAPI',
+    link: 'https://rss-api.cacaomath.com/redoc',
   },
   {
-    title: 'b',
-    subtitle: 'string',
-    content: 'none',
-    link: 'https://cacaomath.com',
+    title: '希望のヒカリ',
+    subtitle: 'C#, Unity',
+    content:
+      '2019/3月に行われた"#Unity1week"というイベントで作ったゲーム。縦スクロールアクションで障害物をよけたりしてスコアを稼いで遊ぶ。',
+    link: 'https://unityroom.com/games/kibou-no-hikari',
   },
   {
-    title: 'a',
-    subtitle: 'string',
-    content: 'none',
-    link: 'https://cacaomath.com',
+    title: 'FlowChat',
+    subtitle: 'HTML/CSS, JavaScript, Firebase',
+    content:
+      'ニコニコ動画のようにコメントがブラウザ上で流れてくるアプリ。背景が緑なので透過させてほかの画面に合成もできる。',
+    link: 'https://flowchat-7d30c.web.app/index.html',
   },
   {
-    title: 'b',
-    subtitle: 'string',
-    content: 'none',
-    link: 'https://cacaomath.com',
+    title: 'PLACE',
+    subtitle: 'Kotlin, Java, Android',
+    content:
+      'Research"m-Learning時の行動や学習方法が学習効果や安全性に与える影響"で使用した。Androidで英単語学習を行うアプリケーション。フラッシュカード形式や音声で聞き流して学習することができる。',
+    link: 'https://github.com/cacaoMath/PLACE#place',
   },
 ];
 

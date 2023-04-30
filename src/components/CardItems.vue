@@ -17,12 +17,13 @@
             v-bind="props"
             :href="item.link"
             target="_blank"
-            class="pa-3 ma-1"
           >
-            <v-card-title class="text-h5 flex-column text-truncate text-lg">{{
-              item.title
-            }}</v-card-title>
-            <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
+            <div class="bg-surface-variant pb-2">
+              <v-card-title class="text-h5 flex-column text-truncate text-lg">{{
+                item.title
+              }}</v-card-title>
+              <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
+            </div>
             <v-card-text>{{ item.content }}</v-card-text>
           </v-card>
         </v-hover>
